@@ -31,6 +31,7 @@ class Student extends Person {
 }
 
 class StudentRole extends Role {
+  @override
   void displayRole () {
     print('Role: Student');
   }
@@ -47,6 +48,7 @@ class Teacher extends Person {
 }
 
 class TeacherRole extends Role {
+  @override
   void displayRole () {
     print ('Role: Teacher');
   }
@@ -84,6 +86,6 @@ void main () {
   print ('Teacher ID: ${teacher1.teacherID}');
   print ('Courses Taught:');
   for (var course in teacher1.coursesTaught) {
-    print(course);
+    print('-$course');
   }
 }
